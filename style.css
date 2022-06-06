@@ -1,0 +1,889 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: all .4s linear ease;
+    font-family: 'Cuprum', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Rubik', sans-serif; */
+    /* font-family: 'Hind Siliguri', sans-serif; */
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+
+:root{
+    --box-shadow: 0 .1rem .1rem 0 rgba(186, 183, 183, 0.1);
+    --lg-black: #777;
+    --black: rgba(0, 0, 0, 0.770);
+    --lg-white: rgba(185, 186, 192, 0.379);
+    --lg-white-2: rgba(217, 221, 243, 0.25);
+    --blue: rgb(47, 110, 226);
+    --border: 1px solid rgba(229, 209, 209, 0.64);
+    --box-shadow: 0 .3rem .3rem rgba(0,0,0,0.4);
+    --box-shadow-2: 0 .5rem 1rem rgba(0,0,0,0.1);
+    --font-family-capitals: 'Lato', sans-serif;
+    --font-family-heading: 'Nunito', sans-serif;
+    --font-family-spans: 'Hind', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    /* font-size: 95%; */
+}
+
+/* media quries */
+
+@media(max-width: 441px){
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .6rem 1rem ;
+        /* box-shadow: 0 .1rem .1rem 0; */
+        box-shadow: var(--box-shadow-2);
+        background: none;
+    }
+
+    .navbar .fa-arrow-left{
+        font-size: 1.2rem;
+        color: var(--lg-black);
+        padding-right: .7rem;
+    }
+
+    .navbar .fa-heart{
+        font-size: 1.3rem;
+        color: var(--blue);
+    }
+
+    .navbar .title{
+        text-align: left;
+        width: 80%;
+        line-height: 1;
+    }
+
+    .navbar .title p{
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--black);
+        font-family: var(--font-family-heading);
+    }
+
+    .navbar .title span{
+        font-size: .8rem;
+        font-weight: 500;
+        color: var(--lg-black);
+        font-family: var(--font-family-spans);
+    }
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .wrapper .city, .wrapper .room-guest{
+        width: 100%;
+        background: var(--lg-white-2);
+        display: flex;
+        align-items: center;
+        padding: .3rem .8rem;
+        border-radius: .2rem;
+        border: 1px solid var(--lg-black);
+    }
+
+    .wrapper .city .fa-location-dot, .room-guest .fa-user{
+        font-size: 1.5rem;
+        padding-right: .6rem;
+        color: var(--lg-black);
+    }
+
+    .wrapper .city .heading, .room-guest .heading{
+        font-size: .8rem;
+        color: var(--lg-black);
+        font-weight: 500;
+        letter-spacing: .05rem;
+    }
+
+    .wrapper .city .bold, .room-guest .bold{
+        font-size: 1rem;
+        font-weight: 1000;
+        font-family: 'Alata', sans-serif;
+    }
+
+    .wrapper .city .span, .room-guest .span{
+        color: #222;
+        /* font-weight: 500; */
+        font-size: .9rem;
+    }
+
+    .wrapper .box{
+        display: flex;
+        padding: .3rem 1rem;
+        gap: .5rem;
+        width: 100vw;
+    }
+
+    .wrapper .in-date, .wrapper .out-date{
+        background: var(--lg-white-2);
+        border: 1px solid var(--lg-black);
+        border-radius: .1rem;
+        display: flex;
+        align-items: center;
+        padding: .8rem .8rem 0rem .8rem;
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+        width: 49%;
+    }
+
+    .wrapper .in-date i{
+        font-size: 1.5rem;
+        padding-right: .3rem;
+        color: var(--lg-black);
+        text-align: left;
+        padding-bottom: .5rem;
+    }
+
+    .wrapper .in-date .wrap, .wrapper .out-date .wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* padding-top: .5rem; */
+    }
+
+    .wrapper .in-date .wrap .heading, .wrapper .out-date .wrap .heading{
+        font-size: .8rem;
+        color: var(--lg-black);
+        padding-bottom: .2rem;
+        width: 90%;
+    }
+
+    .wrapper .in-date .flex, .wrapper .out-date .flex{
+        display: flex;
+        /* flex-direction: column; */
+        /* display: inline-block; */
+        align-items: center;
+        height: 100%;
+        /* padding-right: 1rem; */
+        width: 90%;
+        align-items: center;
+    }
+
+    .wrapper .in-date .wrap .flex .bold, .wrapper .out-date .wrap .flex .bold{
+        font-size: .8rem;
+        /* margin-left: .1rem; */
+        font-weight: 600;
+        text-align: left;
+        font-family: 'Alata', sans-serif;
+    }
+
+    .wrapper .in-date .wrap .flex .span,  .wrapper .out-date .wrap .flex .span{
+        /* color: var(--lg-black); */
+        font-size: .7rem;
+        padding-left: .3rem;
+        padding-top: .1rem;
+        font-weight: 600;
+        align-items: center;
+        padding-top: .3rem;
+        color: var(--black);
+    }
+
+    .wrapper .btn{
+        width: 100%;
+        background: var(--blue);
+        margin-top: 1rem;
+        padding: .5rem;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        border-radius: .3rem;
+        font-family: 'poppins', sans-serif;
+        letter-spacing: .05rem;
+    }
+
+    /* content section starts */
+
+    .box{
+        width: 100vw;
+        padding: .8rem;
+    }
+    .box .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: .8rem;
+    }
+    .box .wrap h3{
+        color: rgba(134, 44, 164, 0.815);
+        font-size: 1.1rem;
+        font-weight: 1000;
+    }
+    .box .wrap a{
+        color: rgba(134, 44, 164, 0.815);
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    .box .swiper .swiper-wrapper .slide{
+        width: 100%;
+        /* height: 12rem; */
+        border-radius: .2rem;
+    }
+
+    .box .card-slider .slide .image{
+        width: 100%;
+        height: 80%;
+        background: url(images/img-2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .box .slide .image span{
+        padding: .3rem .4rem .2rem .4rem;
+        background: #fff;
+        border-radius: 1rem;
+        float: right;
+        margin-top: .5rem;
+        margin-right: .5rem;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+
+    .box .slide .image .wrap{
+        display: flex;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        padding-top: 28%;
+    }
+
+    .box .slide .image .wrap h3{
+        color: #fff;
+        font-size: 1.9rem;
+        border-right: 1px solid #fff;
+        width: 50%;
+        font-weight: 800;
+    }
+    .box .slide .image .wrap p{
+        color: #fff;
+        font-size: 1rem;
+        background: none;
+        font-weight: 600;
+        width: 48%;
+        text-align: left;
+    }
+
+    .box .slide .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        text-align: center;
+    }
+    .box .slide .wrap p{
+        padding: .3rem .8rem;
+        text-align: center;
+        background: rgb(135, 12, 12);
+        border-radius: 1.5rem;
+        font-size: .8rem;
+        color: #fff;
+    }
+    .box .slide .wrap span{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .box .slide .wrap a{
+        color: rgb(46, 46, 148);
+    }
+
+    .box .slide .image-2 .wrap{
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-bottom: 2rem ;
+        padding-top: .5rem;
+    }
+    .box .slide .image-2 .span{
+        padding-top: 3rem;
+    }
+    .box .slide .image-2 p{
+        padding-left: .5rem;
+        background: rgb(159, 36, 36);
+        margin-left: .5rem;
+        width: 30%;
+        color: #fff;
+        font-size: .7rem;
+        padding: .2rem .5rem;
+        font-style: italic;
+        font-weight: 600;
+    }
+    .box .slide .image-2 .wrap h3{
+        width: 100%;
+        font-size: 1.2rem;
+        border: none;
+    }
+    .box .slide .image-2 .wrap p{
+        width: 100%;
+        padding: 0;
+        font-size: .8rem;
+        color: var(--lg-white);
+        font-weight: normal;
+        font-style: normal;
+        margin: .2rem 0 0 0;
+    }
+    .box .image-2 .wrap .side{
+        width: 100%;
+        text-align: right;
+    }
+
+    /* css for card-2 section starts  */
+
+    .box-2{
+        width: 100vw;
+        /* padding: 1rem; */
+        padding: .8rem 0 .8rem .8rem;
+        border-top: 1px solid var(--lg-black);
+    }
+
+    .box-2 .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding-bottom: .8rem; */
+    }
+    .box-2 .wrap h3{
+        color: rgba(152, 111, 29, 0.815);
+        font-size: 1.1rem;
+        font-weight: bolder;
+    }
+    .box-2 .wrap a{
+        color: rgba(152, 111, 29, 0.815);
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 800;
+        padding-bottom: .5rem;
+    }
+
+    .box-2 p{
+        padding: .5rem 0 1rem 0;
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+
+    .box-2 .slide{
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+        border: 1px solid #ccc;
+        margin-bottom: 2rem;
+        height: 13rem;
+        margin-left: .5rem;
+        width: 10rem;
+    }
+
+    .box-2 .slide img{
+        width: 100%;
+        height: 8rem;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .box-2 .slide .content{
+        padding: .5rem;
+    }
+
+    .box-2 .slide h4{
+        font-size: .9rem;
+        font-weight: bolder;
+        padding-bottom: .2rem;
+    }
+    
+    .box-2 .slide p{
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+        padding: 0;
+        font-size: .9rem;
+        font-weight: normal;
+    }
+
+    /* css for term page starts here */
+
+    .terms{
+        width: 100vw;
+        padding: .8rem 0 .8rem .8rem;
+    }
+
+    .terms h3{
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: poppins;
+        margin-bottom: 1rem;
+    }
+
+    .terms .swiper-wrapper{
+        height: 15rem;
+    }
+
+    .terms .slide{
+        height: 10rem;
+        border: var(--border);
+        padding: 1rem;
+        box-shadow: var(--box-shadow);
+        width: 15rem;
+    }
+
+    .terms .slide h4{
+        font-weight: 1000;
+        font-family: var(--font-family-capitals);
+        font-size: .9rem;
+        padding-bottom: .3rem;
+    }
+
+    .terms .slide a{
+        text-decoration: none;
+        color: var(--blue);
+    }
+
+    /* css for term page ends here */
+
+
+
+    /* css for card-2 section ends  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* css for page 2 */
+
+    .navbar-2{
+        margin: .8rem .8rem .2rem .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: none;
+    }
+
+    .navbar-2 .fa-arrow-left{
+        font-size: 1.2rem;
+        padding-right: .5rem;
+        color: var(--lg-black);
+        text-decoration: none;
+    }
+
+    .navbar-2 .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: .8rem; */
+        background: var(--lg-white-2);
+        /* color: var(--lg-black); */
+        border: 1px solid var(--lg-black);
+        border-radius: .2rem;
+        padding: .2rem .5rem;
+        width: 80%;
+        line-height: 1;
+    }
+
+    .navbar-2 .wrap .wrap-2{
+        width: 100%;
+        padding-top: .3rem;
+    }
+
+    .navbar-2 .wrap .wrap-2 h4{
+        color: var(--black);
+        padding-bottom: .1rem;
+        font-family: 'nunito';
+    }
+
+    .navbar-2 .wrap .wrap-2 input{
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding-right: .3rem;
+        font-size: .8rem;
+        font-family: var(--font-family-spans);
+    }
+
+    .navbar-2 .wrap .edit i{
+        padding: 0 .5rem;
+        font-size: 1.2rem;
+        color: rgb(0, 140, 255);
+    }
+
+    .navbar-2 .search{
+        margin-left: .8rem;
+    }
+    .navbar-2 .map{
+        margin-left: .3rem;
+    }
+
+    .navbar-2 .search i, .navbar-2 .map i{
+        padding: 0 .5rem;
+        font-size: 1.2rem;
+        color: rgb(0, 140, 255);
+    }
+    .navbar-2 .search p, .navbar-2 .map p, .navbar-2 .wrap .edit p{
+        color: rgb(0, 140, 255);
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    /* css for filter section starts  */
+
+    .filter-container{
+        width: 100vw;
+    }
+
+    .filter-container .box{
+        display: flex;
+        /* gap: .2rem; */
+    }
+
+    .filter-container .box .filter i{
+        color: rgb(77, 149, 225);
+        font-size: 1.3rem;
+        padding: .5rem .5rem .5rem 0;
+        border-right: 2.5px solid rgba(186, 180, 180, 0.64);
+    }
+
+    .filter-container .box .filter-card-slider .slide{
+        padding: .5rem;
+        box-shadow: var(--box-shadow-2);
+        border: var(--border);
+        border-radius: 3px;
+        /* width: 5.5rem; */
+        margin-left: .35rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* css for filter section ends */
+
+    .title-2{
+        width: 100vw;
+        padding: .8rem .8rem;
+        text-align: left;
+        background: var(--lg-white);
+        border: 1px solid var(--lg-black);
+    }
+    .title-2 h3{
+        font-size: 1.3rem;
+        font-weight: bolder;
+        font-family: var(--font-family-capitals);
+        color: var(--black);
+    }
+
+    /* css for page section starts */
+
+    /* css ffor popular section starts here  */
+
+    .popular-page, .price-page{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background: #fff;
+        z-index: 1000;
+        display: none;
+    }
+
+    .popular-page.active, .price-page{
+        display: block;
+    }
+
+    .popular-page .header, .price-page .header{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: .2rem .9rem;
+        border-bottom: 1px solid rgba(186, 180, 180, 0.64);
+        box-shadow: var(--box-shadow-2);
+        justify-content: flex-start;
+    }
+
+    .popular-page .header a, .price-page .header a{
+        font-size: 1.3rem;
+        color: var(--lg-black);
+        text-decoration: none;
+    }
+
+    .popular-page .header .box, .price-page .header .box{
+        display: block;
+    }
+
+    .popular-page .header .box h3, .price-page .header .box h3{
+        color: var(--black);
+        font-weight: bold;
+    }
+
+    .popular-page .header .box p, .price-page .header .box p{
+        color: var(--lg-black);
+        font-weight: 100;
+        /* font-family: var(--font-family-capitals); */
+    }
+
+    .popular-page .box-container, .price-page .box-container{
+        width: 100%;
+        padding: .9rem 1rem;
+    }
+
+    .popular-page .box-container h3, .price-page .box-container h3{
+        font-weight: bolder;
+        margin-bottom: 1rem;
+    }
+
+    .popular-page .box-container .wrapper, .price-page .box-container .wrapper{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+
+    .popular-page .box-container .wrapper .box, .price-page .box-container .wrapper .box{
+        width: auto;
+        margin: 0; padding: .6rem .6rem;
+        float: left;
+        margin: 0 .5rem .5rem 0;
+        border: var(--border);
+        border-radius: 5px;
+    }
+
+    .popular-page .box-container .wrapper .box p, .price-page .box-container .wrapper .box p{
+        font-size: .9rem;
+        color: var(--black);
+    }
+
+    .popular-page .box-container .btn, .price-page .box-container .btn{
+        display: inline-block;
+        /* display: none; */
+        width: 95%;
+        position: fixed;
+        bottom: .5rem;
+        left: .5rem; right: .5rem;
+        background: rgb(47, 110, 226);
+        color: #fff;
+        padding: .9rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+
+    /* css ffor popular section ends here  */
+
+    /* css ffor price section startss here  */
+
+    .price-page{
+        display: none;
+    }
+
+    .price-page.active{
+        display: block;
+    }
+
+    .price-page .box-container .wrapper-2{
+        display: inline-block;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--lg-black);
+    }
+
+    .price-page .box-container .wrapper-2 a{
+        display: inline-block;
+        /* width: 1; */
+        width: auto;
+        margin: 0; padding: .6rem .6rem;
+        /* float: left; */
+        text-decoration: none;
+        margin: 0 10rem .5rem 0;
+        border: var(--border);
+        border-radius: 5px;   
+        font-size: .9rem;
+        color: var(--black);
+    }
+
+    .price-page .box-container .wrapper-2 a:hover{
+        border: 1px solid rgb(47, 110, 226);
+        /* background: rgb(47, 110, 226); */
+        color: rgb(47, 110, 226);
+    }
+
+    /* css ffor price section ends here  */
+
+    .page{
+        width: 100vw;
+        background: var(--lg-white);
+    }
+
+    .page .card{
+        padding: .8rem;
+        background: #fff;
+        width: 100%;
+        border: 1px solid var(--lg-black);
+        margin-bottom: 1.2rem;
+        display: none;
+    }
+
+    .page .card:nth-child(1),
+    .page .card:nth-child(2),
+    .page .card:nth-child(3){
+        display: block;
+    }
+
+    .page .card .image img{
+        width: 100%;
+        border-radius: .2rem;
+        height: 12rem;
+        margin-bottom: .6rem;
+    }
+
+    .page .card .image span{
+        background: rgba(66, 211, 134, 0.767);
+    }
+
+    .page .card .content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page .card .content .con-1{
+        width: 70%;
+    }
+    .page .card .content .con-1 h3{
+        font-size: 1.1rem;
+        font-weight: 800;
+        padding-bottom: .3rem;
+        font-family: var(--font-family-heading);
+    }
+
+    .page .card .content .con-1 p{
+        font-size: .8rem;
+        /* width: 90%; */
+        color: var(--lg-black);
+        padding-bottom: .5rem;
+        font-family: var(--font-family-spans);
+    }
+
+    .page .card .content .con-1 span{
+        display: block;
+        background: rgba(135, 207, 235, 0.416);
+        width: 4rem;
+        font-size: .8rem;
+        font-weight: 600;
+        color: blue;
+        padding: .2rem;
+        border-left: 3px solid blue;
+        border-radius: 0rem .3rem .3rem 0;
+        margin-bottom: .5rem;
+        font-family: var(--font-family-spans);
+    }
+
+    .page .card .content .con-1 i{
+        color: rgb(92, 32, 32);
+        font-size: .8rem;
+        font-style: normal;
+    }
+
+    .page .card .content .con-2{
+        text-align: right;
+        padding-top: 1.5rem;
+    }
+
+    .page .card .content .con-2 span{
+        font-size: .7rem;
+        font-weight: 600;
+        color: var(--lg-black);
+    }
+
+    .page .card .content .con-2 h4{
+        font-size: 1.3rem;
+        font-weight: 1000;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+    }
+
+    .page .card .content .con-2 p{
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    .page .card .content .con-2 .fade{
+        display: block;
+        color: var(--lg-black);
+        font-weight: 300;
+    }
+
+    .page .card .offer{
+        background: rgba(0, 128, 87, 0.368);
+        padding: .5rem 1rem;
+        text-align: left;
+        font-size: .7rem;
+        border-radius: 1rem;
+        margin-top: .5rem;
+    }
+
+    .page #load-more{
+        display: inline-block;
+        width: 95%;
+        position: relative;
+        bottom: .5rem;
+        left: .5rem; right: .5rem;
+        background: #fff;
+        background: var(--blue);
+        border: 1px solid rgb(69, 124, 218);
+        color: #fff;
+        padding: .5rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+    }
+
+    .page #load-more.none{
+        display: none;
+    }
+
+    /* css for page section ends here */
+
+}
+
